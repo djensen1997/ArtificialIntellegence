@@ -18,4 +18,5 @@ Run python autograder.py
 
 def add(a, b):
     """Return the sum of a and b"""
+    #please don't make me explain why this works!
     return a + b

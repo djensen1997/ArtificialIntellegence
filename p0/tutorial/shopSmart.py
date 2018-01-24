@@ -28,8 +28,11 @@ def shopSmart(orderList, fruitShops):
         orderList: List of (fruit, numPound) tuples
         fruitShops: List of FruitShops
     """
+    #create a tuple to hold the shop with the local min amount and the actual local min
     min = (fruitShops[0], fruitShops[0].getPriceOfOrder(orderList))
     for i in range(1, len(fruitShops)):
+        #iterate through shops, if an order costs less in the current shop than the stored
+        #local min, it replaces the stored local min
         if(fruitShops[i].getPriceOfOrder(orderList) < min[1]):
             min = (fruitShops[i], fruitShops[i].getPriceOfOrder(orderList))
         else:

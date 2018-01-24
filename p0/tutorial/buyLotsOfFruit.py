@@ -34,9 +34,13 @@ def buyLotsOfFruit(orderList):
     """
     totalCost = 0.0
     for item in orderList:
+        #checks if the item is in the store, if it isn't, it errors
         if(fruitPrices[item[0]] is None):
             print "ERROR: FRUIT {} NOT FOUND".format(item[0])
+            return None
         else:
+        #if the item is in the store, it adds it's price per pound
+        #multiplied by the number of pounds the order calls for
             totalCost += (fruitPrices[item[0]] * item[1])
     return totalCost
 
